@@ -10,24 +10,29 @@ public class WordGraph {
 
     public ArrayList<WordNode> words = new ArrayList<>();
 
-
     public WordGraph(String file){
 
         FileReader fr;
         BufferedReader br;
-        try {
+        try{
             fr = new FileReader(new File(file));
             br = new BufferedReader(fr);
             String word;
             while ((word = br.readLine()) != null){
-                WordNode newNode = new WordNode(word);
-                words.add(newNode);
-                newNode.printNode();
+                makeNode(word);
             }
+            System.out.println(words.size());
         }
-        catch (Exception e) {
+        catch (Exception e){
             System.err.println(e.getMessage());
         }
 
     }
+
+    public void makeNode(String word){
+        WordNode newNode = new WordNode(word);
+        words.add(newNode);
+        newNode.printNode();
+    }
+
 }
