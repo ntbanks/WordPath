@@ -17,4 +17,8 @@ public class WordNode {
     public void printNode(){
         System.out.println(this.word);
     }
+
+    public int getLength(){
+        return this.word.length();
+    }
 }
