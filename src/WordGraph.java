@@ -26,6 +26,7 @@ public class WordGraph {
         catch (Exception e){
             System.err.println(e.getMessage());
         }
+        System.out.println("test");
 
     }
 
